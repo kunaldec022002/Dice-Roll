@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Dice-Rolling
+        </title>
+        <style>
+            #game-head
+            {
+                text-align: center;
+                padding: 10px;
+            }
+
+            .dice-img
+            {
+                
+                height: 250px;
+                display: block;
+                margin: 0px auto;
+                padding: 10px;
+                box-shadow: 1px 3px 5px 3px black;
+            }
+
+            .roll-btn
+            {
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+            }
+
+            .btn
+            {
+                font-size: 25px;
+                padding: 4px;
+                width: 100px;
+                border-radius: 5px;
+            }
+            .btn:hover
+            {
+                background-color: cadetblue;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 id="game-head">Dice-Roll Game</h1>
+
+        <img src="./Image/dice default.png" class="dice-img" id="dice"/>
+        <div class="roll-btn">
+            <button class="btn" onclick="roll()">Roll</button>
+        </div>
+
+        <script>
+            function roll()
+            {
+                 const randomNumber  = Math.floor(Math.random() *(6 -1) + 1);
+                 console.log(randomNumber);
+
+                 const diceImage = document.getElementById('dice');
+                 
+
+                 if (randomNumber==1)
+                 {
+                    diceImage.src = "./Image/dice 01.png";
+                 }
+                 else if(randomNumber==2)
+                 {
+                    diceImage.src= "./Image/dice 02.png";
+                 }
+
+                 else if(randomNumber==3)
+                 {
+                    diceImage.src= "./Image/dice 03.png";
+                 }
+
+                 else if(randomNumber==4)
+                 {
+                    diceImage.src= "./Image/dice 04.png";
+                 }
+
+                 else if(randomNumber==5)
+                 {
+                    diceImage.src= "./Image/dice 05.png";
+                 }
+
+                 else 
+                 {
+                    diceImage.src= "./Image/dice 06.png";
+                 }
+
+            }
+        </script>
+    </body>
+</html>
